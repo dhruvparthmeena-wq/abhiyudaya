@@ -833,7 +833,7 @@
         const card = document.createElement("article");
         card.className = "memory glass reveal";
         card.style.setProperty("--tilt", `${(i % 2 ? 1 : -1) * (1 + Math.random() * 1.8)}deg`);
-        card.innerHTML = `<img src="${svgPhoto(m[0], m[2], m[3], m[4])}" alt="${m[0]} memory card"><h3>${m[0]}</h3><p>${m[1]}</p>`;
+        card.innerHTML = `<img src="(m[IMG_20240925_182608.jpg], m[2], m[3], m[4])}" alt="${m[0]} memory card"><h3>${m[0]}</h3><p>${m[1]}</p>`;
         card.addEventListener("click", () => openMemory(m));
         wall.appendChild(card);
       });
