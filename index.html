@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Abhiyudaya 🎂</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
+body{
+  background:linear-gradient(135deg,#ff9a9e,#fad0c4);
+  color:#fff;
+  overflow-x:hidden;
+}
+section{
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-direction:column;
+  text-align:center;
+  padding:20px;
+}
+h1{
+  font-size:3rem;
+  animation:fadeIn 2s ease-in-out;
+}
+p{
+  font-size:1.2rem;
+  margin-top:10px;
+  max-width:600px;
+}
+button{
+  margin-top:20px;
+  padding:12px 25px;
+  border:none;
+  border-radius:25px;
+  background:#ff4d6d;
+  color:#fff;
+  cursor:pointer;
+  font-size:1rem;
+  transition:0.3s;
+}
+button:hover{background:#ff1e4d}
+
+.gallery img{
+  width:200px;
+  border-radius:20px;
+  margin:10px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.2);
+  transition:0.3s;
+}
+.gallery img:hover{transform:scale(1.1)}
+
+@keyframes fadeIn{
+  from{opacity:0;transform:translateY(30px)}
+  to{opacity:1;transform:translateY(0)}
+}
+
+.heart{
+  position:fixed;
+  top:-10px;
+  font-size:20px;
+  animation:fall 5s linear infinite;
+}
+@keyframes fall{
+  to{transform:translateY(110vh)}
+}
+</style>
+</head>
+<body>
+
+<audio autoplay loop>
+  <source src="https://www2.cs.uic.edu/~i101/SoundFiles/HappyBirthday.mid" type="audio/midi">
+</audio>
+
+<section>
+  <h1>🎉 Happy Birthday abhiyudaya 🎉</h1>
+  <p> You are not just my best friend, you are my happiness, my support, and my favorite person in the world </p>
+  <button onclick="nextSection()">Start Journey 💫</button>
+</section>
+
+<section id="sec2" style="display:none">
+  <h1>💌 A Special Message</h1>
+  <p> Abhiyudaya, thank you for being in my life. Your smile makes everything better. I hope your day is filled with love, laughter, and unforgettable moments ❤️</p>
+  <button onclick="showGallery()">See Memories 📸</button>
+</section>
+
+<section id="gallery" style="display:none">
+  <h1>📸 Our Memories</h1>
+  <div class="gallery">
+    <!-- Replace with your images -->
+    <img src="WhatsApp Image 2026-06-07 at 10.03.01 PM (2).jpng">
+    <img src="photo2.jpg">
+    <img src="photo3.jpg">
+  </div>
+  <button onclick="finalWish()">Final Surprise 🎁</button>
+</section>
+
+<section id="final" style="display:none">
+  <h1>💖 You Are Special 💖</h1>
+  <p>No matter what happens, I will always be there for you. Happy Birthday once again, abhiyudaya 🎂✨</p>
+</section>
+
+<script>
+function nextSection(){
+  document.querySelector('section').style.display='none';
+  document.getElementById('sec2').style.display='flex';
+}
+function showGallery(){
+  document.getElementById('sec2').style.display='none';
+  document.getElementById('gallery').style.display='flex';
+}
+function finalWish(){
+  document.getElementById('gallery').style.display='none';
+  document.getElementById('final').style.display='flex';
+}
+
+// floating hearts
+setInterval(()=>{
+  const heart=document.createElement('div');
+  heart.className='heart';
+  heart.innerText='💖';
+  heart.style.left=Math.random()*100+'vw';
+  heart.style.animationDuration=(Math.random()*3+2)+'s';
+  document.body.appendChild(heart);
+  setTimeout(()=>heart.remove(),5000);
+},300);
+</script>
+
+</body>
+</html>
