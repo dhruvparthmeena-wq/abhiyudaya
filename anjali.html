@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Videographer Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap');
+        
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #0d0e12;
+            color: #f3f4f6;
+            overflow-x: hidden;
+        }
+
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .glow-effect {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(239, 68, 68, 0.15) 0%, rgba(0,0,0,0) 70%);
+            pointer-events: none;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0d0e12;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #262930;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #ef4444;
+        }
+    </style>
+</head>
+<body class="relative">
+
+    <div class="glow-effect top-10 left-10"></div>
+    <div class="glow-effect top-1/2 right-10"></div>
+
+    <nav class="fixed top-0 left-0 w-full z-50 glass-panel px-6 py-4 flex justify-between items-center transition-all duration-300">
+        <a href="#" class="text-xl font-extrabold tracking-wider text-white flex items-center gap-2">
+            <i data-lucide="video" class="text-red-500"></i> LENS & MOTION
+        </a>
+        <div class="hidden md:flex space-x-8 text-sm font-semibold tracking-wide text-gray-300">
+            <a href="#about" class="hover:text-red-500 transition-colors">ABOUT</a>
+            <a href="#skills" class="hover:text-red-500 transition-colors">SKILLS</a>
+            <a href="#work" class="hover:text-red-500 transition-colors">SELECTED WORK</a>
+            <a href="#contact" class="hover:text-red-500 transition-colors">CONTACT</a>
+        </div>
+        <a href="#contact" class="bg-red-600 hover:bg-red-700 text-white text-xs font-bold uppercase tracking-widest px-5 py-2.5 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg shadow-red-600/30">
+            Let's Talk
+        </a>
+    </nav>
+
+    <section class="min-h-screen flex items-center justify-center relative pt-20 px-6">
+        <div class="text-center max-w-4xl mx-auto space-y-6">
+            <div class="hero-anim inline-flex items-center gap-2 px-4 py-2 rounded-full glass-panel text-red-400 text-xs font-bold uppercase tracking-widest">
+                <i data-lucide="sparkles" class="w-4 h-4"></i> Director of Photography & Video Editor
+            </div>
+            <h1 class="hero-anim text-5xl md:text-7xl lg:text-8xl font-black tracking-tight leading-none uppercase bg-clip-text text-transparent bg-gradient-to-r from-white via-gray-200 to-gray-600">
+                Crafting Visual <br><span class="text-red-500">Masterpieces</span>
+            </h1>
+            <p class="hero-anim text-gray-400 text-base md:text-xl max-w-2xl mx-auto font-light leading-relaxed">
+                Driven by a deep passion for cinema, movement, and visual storytelling. Turning raw ideas into immersive visual experiences.
+            </p>
+            <div class="hero-anim pt-4 flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#work" class="bg-white text-black hover:bg-gray-200 px-8 py-4 rounded-full font-bold text-sm tracking-wide transition-all transform hover:scale-105">
+                    VIEW PORTFOLIO
+                </a>
+                <a href="#about" class="glass-panel text-white hover:bg-white/10 px-8 py-4 rounded-full font-bold text-sm tracking-wide transition-all">
+                    MY STORY
+                </a>
+            </div>
+        </div>
+        
+        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-gray-500 text-xs font-bold tracking-widest">
+            <span>SCROLL</span>
+            <div class="w-0.5 h-8 bg-gradient-to-b from-red-500 to-transparent animate-pulse"></div>
+        </div>
+    </section>
+
+    <section id="about" class="py-24 px-6 max-w-6xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div class="reveal-left relative">
+                <div class="aspect-[4/5] rounded-2xl overflow-hidden glass-panel relative group">
+                    <img src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?auto=format&fit=crop&w=1000&q=80" alt="Videographer at work" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+                </div>
+            </div>
+            <div class="reveal-right space-y-6">
+                <span class="text-red-500 font-bold text-xs uppercase tracking-widest">PASSION & VISION</span>
+                <h2 class="text-3xl md:text-5xl font-extrabold leading-tight">Driven by every frame, lighting angle, and narrative beats.</h2>
+                <p class="text-gray-400 leading-relaxed font-light">
+                    Videography isn't just my career; it’s how I interpret the world. From high-energy commercial spots to dramatic narrative storytelling, I focus on capturing emotions that resonate. 
+                </p>
+                <div class="grid grid-cols-2 gap-6 pt-4">
+                    <div class="glass-panel p-4 rounded-xl border-l-2 border-l-red-500">
+                        <h4 class="text-2xl font-bold text-white">50+</h4>
+                        <p class="text-xs text-gray-400 uppercase tracking-wider">Projects Completed</p>
+                    </div>
+                    <div class="glass-panel p-4 rounded-xl border-l-2 border-l-red-500">
+                        <h4 class="text-2xl font-bold text-white">4K / 8K</h4>
+                        <p class="text-xs text-gray-400 uppercase tracking-wider">Production Standards</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="py-24 px-6 glass-panel border-y border-white/5 my-12">
+        <div class="max-w-6xl mx-auto space-y-12">
+            <div class="text-center space-y-3">
+                <span class="text-red-500 font-bold text-xs uppercase tracking-widest">TECHNICAL EXPERTISE</span>
+                <h2 class="text-3xl md:text-5xl font-extrabold">Skills & Tools</h2>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                
+                <div class="skill-card glass-panel p-6 rounded-2xl hover:border-red-500/50 transition-all group">
+                    <i data-lucide="camera" class="w-10 h-10 text-red-500 mb-4 group-hover:scale-110 transition-transform"></i>
+                    <h3 class="text-lg font-bold mb-2">Cinematography</h3>
+                    <p class="text-sm text-gray-400 font-light">Camera operating, composition, blocking, and lens selection for narrative impact.</p>
+                </div>
+
+                <div class="skill-card glass-panel p-6 rounded-2xl hover:border-red-500/50 transition-all group">
+                    <i data-lucide="sun" class="w-10 h-10 text-red-500 mb-4 group-hover:scale-110 transition-transform"></i>
+                    <h3 class="text-lg font-bold mb-2">Lighting Design</h3>
+                    <p class="text-sm text-gray-400 font-light">3-point lighting setups, mood shaping, natural light manipulation, and studio setups.</p>
+                </div>
+
+                <div class="skill-card glass-panel p-6 rounded-2xl hover:border-red-500/50 transition-all group">
+                    <i data-lucide="scissors" class="w-10 h-10 text-red-500 mb-4 group-hover:scale-110 transition-transform"></i>
+                    <h3 class="text-lg font-bold mb-2">Video Editing</h3>
+                    <p class="text-sm text-gray-400 font-light">Pacing, rhythm editing, narrative assembly in Premiere Pro and DaVinci Resolve.</p>
+                </div>
+
+                <div class="skill-card glass-panel p-6 rounded-2xl hover:border-red-500/50 transition-all group">
+                    <i data-lucide="palette" class="w-10 h-10 text-red-500 mb-4 group-hover:scale-110 transition-transform"></i>
+                    <h3 class="text-lg font-bold mb-2">Color Grading</h3>
+                    <p class="text-sm text-gray-400 font-light">LUT creation, log footage conversion, color matching, and mood color theory.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="work" class="py-24 px-6 max-w-7xl mx-auto">
+        <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 gap-4">
+            <div>
+                <span class="text-red-500 font-bold text-xs uppercase tracking-widest">SHOWCASE</span>
+                <h2 class="text-3xl md:text-5xl font-extrabold">Featured Films</h2>
+            </div>
+            <p class="text-gray-400 max-w-md font-light text-sm">Click on any project to launch the high-definition video reel player.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <div class="video-card glass-panel rounded-2xl overflow-hidden group cursor-pointer" onclick="openModal('https://www.youtube.com/embed/dQw4w9WgXcQ')">
+                <div class="relative aspect-video overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1536240478700-b869070f9279?auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-all flex items-center justify-center">
+                        <div class="w-14 h-14 rounded-full bg-red-600 flex items-center justify-center shadow-lg transform group-hover:scale-110 transition-transform">
+                            <i data-lucide="play" class="fill-white text-white ml-1"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <span class="text-xs text-red-400 font-semibold tracking-wider uppercase">Commercial</span>
+                    <h3 class="text-xl font-bold mt-1">Urban Velocity Reel</h3>
+                </div>
+            </div>
+
+            <div class="video-card glass-panel rounded-2xl overflow-hidden group cursor-pointer" onclick="openModal('https://www.youtube.com/embed/dQw4w9WgXcQ')">
+                <div class="relative aspect-video overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1518173946687-a4c8a383392e?auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-all flex items-center justify-center">
+                        <div class="w-14 h-14 rounded-full bg-red-600 flex items-center justify-center shadow-lg transform group-hover:scale-110 transition-transform">
+                            <i data-lucide="play" class="fill-white text-white ml-1"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <span class="text-xs text-red-400 font-semibold tracking-wider uppercase">Documentary</span>
+                    <h3 class="text-xl font-bold mt-1">Into the Wilderness</h3>
+                </div>
+            </div>
+
+            <div class="video-card glass-panel rounded-2xl overflow-hidden group cursor-pointer" onclick="openModal('https://www.youtube.com/embed/dQw4w9WgXcQ')">
+                <div class="relative aspect-video overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-all flex items-center justify-center">
+                        <div class="w-14 h-14 rounded-full bg-red-600 flex items-center justify-center shadow-lg transform group-hover:scale-110 transition-transform">
+                            <i data-lucide="play" class="fill-white text-white ml-1"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <span class="text-xs text-red-400 font-semibold tracking-wider uppercase">Music Video</span>
+                    <h3 class="text-xl font-bold mt-1">Neon Horizons</h3>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="contact" class="py-24 px-6 glass-panel border-t border-white/5">
+        <div class="max-w-4xl mx-auto text-center space-y-8">
+            <span class="text-red-500 font-bold text-xs uppercase tracking-widest">GET IN TOUCH</span>
+            <h2 class="text-4xl md:text-6xl font-black">Let’s Create Something Iconic.</h2>
+            <p class="text-gray-400 font-light max-w-xl mx-auto">Available for commercial projects, music videos, narrative films, and freelance direction worldwide.</p>
+            <div class="flex flex-wrap justify-center gap-6 pt-4">
+                <a href="mailto:contact@videographer.com" class="bg-red-600 hover:bg-red-700 text-white font-bold px-8 py-4 rounded-full tracking-wider transition-all transform hover:scale-105 shadow-xl shadow-red-600/20">
+                    START A PROJECT
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-8 px-6 text-center text-xs text-gray-600 border-t border-white/5">
+        <p>&copy; 2026 Lens & Motion. All rights reserved.</p>
+    </footer>
+
+    <div id="videoModal" class="fixed inset-0 z-50 bg-black/90 backdrop-blur-md hidden items-center justify-center p-4">
+        <div class="relative w-full max-w-4xl aspect-video glass-panel rounded-2xl overflow-hidden shadow-2xl">
+            <button onclick="closeModal()" class="absolute top-4 right-4 z-10 w-10 h-10 rounded-full bg-black/50 text-white flex items-center justify-center hover:bg-red-600 transition-colors">
+                <i data-lucide="x"></i>
+            </button>
+            <iframe id="modalIframe" class="w-full h-full" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <script>
+        // Initialize Icons
+        lucide.createIcons();
+
+        // GSAP Scroll Animations Setup
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Hero Animation Sequence
+        gsap.from(".hero-anim", {
+            duration: 1,
+            y: 40,
+            opacity: 0,
+            stagger: 0.2,
+            ease: "power3.out"
+        });
+
+        // About Reveal Animations
+        gsap.from(".reveal-left", {
+            scrollTrigger: { trigger: ".reveal-left", start: "top 80%" },
+            duration: 1,
+            x: -50,
+            opacity: 0,
+            ease: "power3.out"
+        });
+
+        gsap.from(".reveal-right", {
+            scrollTrigger: { trigger: ".reveal-right", start: "top 80%" },
+            duration: 1,
+            x: 50,
+            opacity: 0,
+            ease: "power3.out"
+        });
+
+        // Skill Cards Stagger Animation
+        gsap.from(".skill-card", {
+            scrollTrigger: { trigger: "#skills", start: "top 75%" },
+            duration: 0.8,
+            y: 30,
+            opacity: 0,
+            stagger: 0.15,
+            ease: "power3.out"
+        });
+
+        // Video Work Cards Stagger Animation
+        gsap.from(".video-card", {
+            scrollTrigger: { trigger: "#work", start: "top 75%" },
+            duration: 0.8,
+            y: 40,
+            opacity: 0,
+            stagger: 0.2,
+            ease: "power3.out"
+        });
+
+        // Video Modal Control
+        function openModal(videoUrl) {
+            const modal = document.getElementById('videoModal');
+            const iframe = document.getElementById('modalIframe');
+            iframe.src = videoUrl + "?autoplay=1";
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('videoModal');
+            const iframe = document.getElementById('modalIframe');
+            iframe.src = "";
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        }
+    </script>
+</body>
+</html>
